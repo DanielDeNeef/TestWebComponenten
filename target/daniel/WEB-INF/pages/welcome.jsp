@@ -12,7 +12,11 @@
 </head>
 <body>
 
-<h1>Welcome</h1>
+<h1>Welcome ${username}</h1>
+
+<form action="logout" method="post">
+    <input type="submit" name="logout" value="Log out">
+</form>
 
 </body>
 </html>

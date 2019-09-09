@@ -11,10 +11,10 @@
     <title>Title</title>
 </head>
 <body>
-<h1>Hello Guest</h1>
+<h1>Hello Guest ${message}</h1>
 <h2>Give A name to log in</h2>
 
-<form action="testdrie" method="post">
+<form action="testdrie" method="Post">
     <input type="text" name="name">
     <input type="submit" value="Push Here">
 </form>
