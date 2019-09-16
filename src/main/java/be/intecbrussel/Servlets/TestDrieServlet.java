@@ -33,7 +33,7 @@ public class TestDrieServlet extends HttpServlet {
             session.setAttribute("message", message);
         }
 
-
+// Strings vergelijken doe je met equals
         if (username != "") {
             session.setAttribute("username", username);
             req.getRequestDispatcher("/WEB-INF/pages/welcome.jsp").forward(req, resp);
@@ -66,7 +66,8 @@ public class TestDrieServlet extends HttpServlet {
         }
 
         session.setAttribute("message", message);
-
+// beter is resp.sendRedirect. Wat je hier in feite doet is: je roept de methode doGet aan, manueel, wat overeen komt met een forward.
+        //een redirect zorgt voor een nieuwe 'get' request bij de client, geen constante 'post' messages bij het refreshen dus
         doGet(req, resp);
     }
 }
